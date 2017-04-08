@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=ScreenMessage
+comment0.text=\n\ Write\ a\ description\ of\ class\ ScreenMessage\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=ScreenMessage()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Message\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\n\ When\ the\ message\ object\ is\ clicked,\ it'll\ disappear.\n\ \n
+comment3.params=msg
+comment3.target=void\ setText(java.lang.String)
+comment3.text=\n\ setText\ of\ the\ message\n\ \n\ @param\ msg\ \ \ The\ content\ of\ the\ message\n
+numComments=4

@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=PrintReceiptState
+comment0.text=\n\ PrintReceiptState\ is\ to\ print\ the\ receipt\ if\:\n\ Car\ Wash\ option\ is\ "YES"\ or\n\ Car\ Wash\ option\ is\ "NO"\ and\ Print\ Receipt\ option\ is\ "YES".\n\n
+comment1.params=gasStation
+comment1.target=PrintReceiptState(GasStation)
+comment1.text=\n\ Constructor\ \n
+comment2.params=
+comment2.target=void\ setMessage()
+comment3.params=
+comment3.target=void\ insertCreditCard()
+comment4.params=
+comment4.target=void\ dispense()
+comment5.params=cost
+comment5.target=void\ print(double)
+numComments=6

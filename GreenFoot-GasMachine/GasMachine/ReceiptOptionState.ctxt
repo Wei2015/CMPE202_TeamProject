@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=ReceiptOptionState
+comment0.text=\n\ If\ Car\ Wash\ option\ is\ "NO",\ Ask\ customers\ if\ they\ want\ their\ receipt.\n\n
+comment1.params=gasStation
+comment1.target=ReceiptOptionState(GasStation)
+comment1.text=\n\ Constructor\ \n
+comment2.params=cost
+comment2.target=void\ print(double)
+comment3.params=
+comment3.target=void\ setMessage()
+comment4.params=
+comment4.target=void\ insertCreditCard()
+comment5.params=
+comment5.target=void\ dispense()
+numComments=6

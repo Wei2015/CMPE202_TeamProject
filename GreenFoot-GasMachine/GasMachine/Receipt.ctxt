@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Receipt
+comment0.text=\n\ Write\ a\ description\ of\ class\ Receipt\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=message
+comment1.target=Receipt(java.lang.String)
+comment2.params=msg
+comment2.target=void\ setText(java.lang.String)
+numComments=3

@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=InitialState
+comment0.text=\n\ Write\ a\ description\ of\ class\ InitialState\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=gasStation
+comment1.target=InitialState(GasStation)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ InitialState\n
+comment2.params=
+comment2.target=void\ setMessage()
+comment3.params=
+comment3.target=void\ insertCreditCard()
+comment4.params=
+comment4.target=void\ dispense()
+comment5.params=cost
+comment5.target=void\ print(double)
+numComments=6

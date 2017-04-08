@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=State
+comment0.text=\n\ Write\ a\ description\ of\ class\ state\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=void\ setMessage()
+comment2.params=
+comment2.target=void\ insertCreditCard()
+comment3.params=
+comment3.target=void\ dispense()
+comment4.params=cost
+comment4.target=void\ print(double)
+numComments=5
