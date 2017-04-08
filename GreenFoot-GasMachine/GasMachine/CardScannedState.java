@@ -40,4 +40,12 @@ public class CardScannedState implements State
                 }
      public void  pressD(){
         }
+        
+               public void pressNumberKey(){}
+     public void pressEnter(){
+         gasStation.creditCardVerify();
+        }
+     public void pressClear(){
+         gasStation.clearNumber();
+        }
 }

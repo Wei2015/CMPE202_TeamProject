@@ -57,6 +57,11 @@ public class ReceiptOptionState implements State
      public void  pressD(){
                              gasStation.reStart();
         }
+        
+    
+               public void pressNumberKey(){}
+     public void pressEnter(){}
+     public void pressClear(){}
 }
 
 

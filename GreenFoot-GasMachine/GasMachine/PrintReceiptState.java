@@ -50,5 +50,9 @@ public class PrintReceiptState implements State
          world.addObject(new Receipt(msg),100,380);
          
      }
+
+               public void pressNumberKey(){}
+     public void pressEnter(){}
+     public void pressClear(){}
    
 }

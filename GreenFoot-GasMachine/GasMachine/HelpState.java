@@ -34,4 +34,9 @@ public class HelpState implements State
                 }
      public void  pressD(){
         }
+        
+ 
+               public void pressNumberKey(){}
+     public void pressEnter(){}
+     public void pressClear(){}
 }

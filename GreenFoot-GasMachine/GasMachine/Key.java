@@ -26,16 +26,18 @@ public class Key extends Actor
     public void act() 
     {
         
-        if(Greenfoot.mousePressed(this)&& gasStation.getState()==gasStation.getCardScannedState()) 
+        if(Greenfoot.mousePressed(this)) 
         {
-           if (keyValue >= 0) {
+            
+        perform();
+        }
+    } 
+    
+    public void perform(){
+    if (keyValue >= 0) {
            gasStation.addNumber(keyValue);
            gasStation.updateScreen();
-           } else if (keyValue == CLEAR){
-               gasStation.clearNumber();
-            } else {
-                gasStation.creditCardVerify();
-            }
-        }
-    }    
+           } 
 }
+}
+

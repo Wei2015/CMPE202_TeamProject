@@ -19,5 +19,9 @@ public interface State
      public void  pressB();
      public void  pressC();
      public void  pressD();
+     
+     public void pressNumberKey();
+     public void pressEnter();
+     public void pressClear();
     
 }

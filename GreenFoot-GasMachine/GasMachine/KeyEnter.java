@@ -12,5 +12,7 @@ public class KeyEnter extends Key
     {
         super(-2,gasStation);
     }
-      
+       public void perform(){
+         gasStation.getState().pressEnter();
+        }
 }
