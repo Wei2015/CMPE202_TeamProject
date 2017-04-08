@@ -143,6 +143,11 @@ public class GasStation
         fuelUnitCost = unitCost;
     }
     
+    public double getFuelTypeCost() 
+    {
+        return fuelUnitCost;
+    }
+    
     public void calculateFuelCost(int units) 
     {
          fuelCost = fuelUnitCost*units;
