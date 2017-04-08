@@ -26,4 +26,18 @@ public class CardScannedState implements State
      public void dispense(){}
      
      public void print(double cost){}
+     
+     
+        public void  pressA(){
+          
+        }
+    
+     public void  pressB(){
+        
+        }
+        
+             public void  pressC(){
+                }
+     public void  pressD(){
+        }
 }

@@ -26,4 +26,17 @@ public class CardVerifiedState implements State
      public void dispense(){}
      
      public void print(double cost) {}
+     
+        public void  pressA(){
+          gasStation.carWash(true);
+        }
+    
+     public void  pressB(){
+          gasStation.carWash(false);
+        }
+        
+     public void  pressC(){
+                }
+     public void  pressD(){
+        }
 }

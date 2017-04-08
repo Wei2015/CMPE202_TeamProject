@@ -5,4 +5,6 @@ comment1.params=gasStation
 comment1.target=Button(GasStation)
 comment2.params=
 comment2.target=void\ act()
-numComments=3
+comment3.params=
+comment3.target=void\ perform()
+numComments=4

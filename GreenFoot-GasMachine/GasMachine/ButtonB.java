@@ -11,4 +11,12 @@ public class ButtonB extends Button
     public ButtonB(GasStation gasStation){
         super(gasStation);
     }
+    
+    
+       
+    public void perform(){
+           if (gasStation.getState()==gasStation.getCardVerifiedState()){
+                    gasStation.carWash(false);
+            }
+    }
 }

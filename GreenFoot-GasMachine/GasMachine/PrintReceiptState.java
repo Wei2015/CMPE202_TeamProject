@@ -23,6 +23,18 @@ public class PrintReceiptState implements State
     }
 
    
+        public void  pressA(){
+          
+        }
+    
+     public void  pressB(){
+        
+        }
+        
+             public void  pressC(){
+                }
+     public void  pressD(){
+        }
     
      public void setMessage(){
         gasStation.getScreen().setText(ScreenMsg);

@@ -14,5 +14,10 @@ public interface State
     
     public void print(double cost);
     
+     public void  pressA();
+    
+     public void  pressB();
+     public void  pressC();
+     public void  pressD();
     
 }

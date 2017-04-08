@@ -17,25 +17,13 @@ public class Button extends Actor
     public void act() 
     {
         if(Greenfoot.mousePressed(this)){
-            if (gasStation.getState()==gasStation.getCardVerifiedState()){
-                if (this.getClass()== ButtonA.class){
-                    gasStation.carWash(true);
-                } else if (this.getClass()==ButtonB.class) {
-                    gasStation.carWash(false);
-                }
-                gasStation.updateScreen();
-            }
-            
-            if (gasStation.getState()==gasStation.getRceiptOptionSate()){
-                if (this.getClass()==ButtonC.class) {
-                    gasStation.printReceipt();
-                    gasStation.reStart();
-                } else if (this.getClass()==ButtonD.class) {
-                    gasStation.reStart();
-                }
-            }
-            
-            
+            this.perform();
+            gasStation.updateScreen();
+  
         }
-    }    
+    }   
+    
+    
+    public void perform(){
+    }
 }

@@ -40,6 +40,23 @@ public class ReceiptOptionState implements State
      public void insertCreditCard(){}
     
     public void dispense(){}
+    
+        public void  pressA(){
+          
+        }
+    
+     public void  pressB(){
+        
+        }
+        
+             public void  pressC(){
+                 
+                   gasStation.printReceipt();
+                    gasStation.reStart();
+                }
+     public void  pressD(){
+                             gasStation.reStart();
+        }
 }
 
 
