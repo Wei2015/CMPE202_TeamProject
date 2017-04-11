@@ -12,8 +12,7 @@ public class ReceiptOptionState extends State
     final String OPTION_MESSAGE = "Would you like to print your receipt?";
     final String YES_OPTION = "Yes";
     final String NO_OPTION = "No";
-    final private String ScreenMsg1 = "                                                 ";
-    final private String ScreenMsg2 = "Help";
+    final private String ScreenMsg = printHelper.whiteSpace(49) + "Help";
     
     
     private boolean answer;
@@ -26,7 +25,6 @@ public class ReceiptOptionState extends State
         this.gasStation = gasStation;
     }
     
-    
     public void print(double cost) 
     {
         World world = gasStation.getCardSlot().getWorld();
@@ -36,19 +34,8 @@ public class ReceiptOptionState extends State
     
     public void setMessage()
     {
-        gasStation.getScreen().setText(OPTION_MESSAGE + "\n\n" + ScreenMsg1 + ScreenMsg2 + "\n\n\n\n" + YES_OPTION 
-        +"\n\n" + NO_OPTION ); 
-    }
-    public void insertCreditCard(){}
-    
-    public void dispense(){}
-    
-    public void  pressA(){
-      
-    }
-    
-    public void  pressB(){
-    
+        gasStation.getScreen().setText(OPTION_MESSAGE + printHelper.newLine(2) + ScreenMsg 
+        + printHelper.newLine(4) + YES_OPTION + printHelper.newLine(2) + NO_OPTION ); 
     }
     
     public void  pressC(){
@@ -56,27 +43,16 @@ public class ReceiptOptionState extends State
         gasStation.printReceipt();
         gasStation.reStart();
     }
+    
     public void  pressD(){
         gasStation.reStart();
     }
+    
     public void pressE(){
-        gasStation.setState(gasStation.helpState);
-        gasStation.getState().setPrevState(gasStation.receiptOptionSate);
+        gasStation.setState(gasStation.getHelpState());
+        gasStation.getState().setPrevState(gasStation.getReceiptOptionState());
         gasStation.updateScreen();
     }
-    public void pressF(){
-        
-    }
-    public void pressG(){
-        
-    }
-    public void pressH(){
-        
-    }
-    
-    public void pressNumberKey(){}
-    public void pressEnter(){}
-    public void pressClear(){}
 }
 
 

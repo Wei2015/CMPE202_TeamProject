@@ -18,7 +18,7 @@ public class Button extends Actor
     {
         if(Greenfoot.mousePressed(this)){
             this.perform();
-            gasStation.updateScreen();
+            //gasStation.updateScreen();
   
         }
     }   

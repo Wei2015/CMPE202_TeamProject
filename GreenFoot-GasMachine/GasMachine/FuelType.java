@@ -10,9 +10,11 @@ public class FuelType extends Actor
 {
     protected GasStation gasStation;
     protected double unitCost;
+    protected String type;
      
-    public FuelType(double price, GasStation gasStation)
+    public FuelType(String type, double price, GasStation gasStation)
     {
+        this.type = type;
         unitCost = price;
         this.gasStation = gasStation; 
     }
@@ -20,11 +22,10 @@ public class FuelType extends Actor
     public void act() 
     {
        if(Greenfoot.mousePressed(this)){
-            if (gasStation.getState()==gasStation.getFuelDispensingState()){
-                gasStation.setFuelType(this.unitCost);
-            }
-            
-            
+         //   if (gasStation.getState()==gasStation.getFuelDispensingState()){
+         //       gasStation.setFuelType(this.unitCost);
+         //   }
+            gasStation.getState().pressFeulType(this.type, this.unitCost);
         }
     }    
 }

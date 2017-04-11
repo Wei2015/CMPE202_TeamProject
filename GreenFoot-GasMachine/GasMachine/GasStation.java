@@ -9,9 +9,11 @@ public class GasStation
     private boolean hasCarWash;
     private double fuelUnitCost = 0.0;
     private double fuelCost;
+    private String fuelType;
     
     
     State currentState;
+    //State prevState;
     
     State initialState;
     State printReceiptState;
@@ -20,7 +22,7 @@ public class GasStation
     State cardVerifiedState;
     State fuelDispensingState;
     State helpState;
-    
+    State cancelConfirmState;
     
 
     /**
@@ -35,14 +37,13 @@ public class GasStation
         cardVerifiedState = new CardVerifiedState(this);
         fuelDispensingState = new FuelDispensingState(this);
         helpState = new HelpState(this);
+        cancelConfirmState = new CancelConfirmState(this);
        
         numberEntered = new ArrayList<>();
         screenMessage = new ScreenMessage();
         cardSlot = new CardInsertSlot(this);
         setState(initialState);
         updateScreen();
-        
-        
     }
     
     public Message getScreen()
@@ -126,26 +127,46 @@ public class GasStation
         return printReceiptState;
     }
     
-    public State getRceiptOptionSate()
+    public State getReceiptOptionState()
     {
         return receiptOptionSate;
+    }
+
+    public State getHelpState()
+    {
+        return helpState;
+    }
+ 
+    public State getCancelConfirmState()
+    {
+        return cancelConfirmState;
     }
     
     public void carWash(boolean haveCarWash) 
     {
-        hasCarWash = haveCarWash;
-        setState(fuelDispensingState);
+        this.hasCarWash = haveCarWash;
+        
         
     }
    
-    public void setFuelType(double unitCost)
+    public void setFuelUnitCost(double unitCost)
     {
         fuelUnitCost = unitCost;
     }
     
-    public double getFuelTypeCost() 
+    public double getFuelUnitCost() 
     {
         return fuelUnitCost;
+    }
+    
+    public void setFuelType(String fuelType)
+    {
+        this.fuelType = fuelType;
+    }
+    
+    public String getFuelType() 
+    {
+        return fuelType;
     }
     
     public void calculateFuelCost(int units) 
@@ -169,4 +190,5 @@ public class GasStation
         setState(initialState);
         updateScreen();
     }
+
 }

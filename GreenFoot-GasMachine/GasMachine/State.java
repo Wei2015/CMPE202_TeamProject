@@ -29,4 +29,7 @@ public class State
     public void pressClear(){};
     public void setPrevState (State prevState) {
     }
+    public void pressFeulType (String fuelType, double unitCost) {
+        
+    }
 }

@@ -15,8 +15,6 @@ public class ButtonB extends Button
     
        
     public void perform(){
-           if (gasStation.getState()==gasStation.getCardVerifiedState()){
-                    gasStation.carWash(false);
-            }
+            gasStation.getState().pressB();
     }
 }

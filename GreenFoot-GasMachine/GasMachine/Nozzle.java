@@ -21,7 +21,7 @@ public class Nozzle extends Actor
         
         if(Greenfoot.mouseDragEnded(this) 
         && gasStation.getState()==gasStation.getFuelDispensingState()
-        && gasStation.getFuelTypeCost()>0) {
+        && gasStation.getFuelUnitCost()>0) {
             MouseInfo mouse = Greenfoot.getMouseInfo();  
             mouseX=mouse.getX();  
             mouseY=mouse.getY();  

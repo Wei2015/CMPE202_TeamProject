@@ -9,14 +9,14 @@ import java.util.ArrayList;
  */
 public class Key extends Actor
 {
-   protected int keyValue;
-   protected GasStation gasStation;
-   protected final int CLEAR = -1;
+    protected int keyValue;
+    protected GasStation gasStation;
+    protected final int CLEAR = -1;
    
-   public Key (int num, GasStation gasStation) 
-   {
-     keyValue=num; 
-     this.gasStation = gasStation;
+    public Key (int num, GasStation gasStation) 
+    {
+    keyValue=num; 
+    this.gasStation = gasStation;
     }
     
     /**
@@ -28,15 +28,14 @@ public class Key extends Actor
         
         if(Greenfoot.mousePressed(this)) 
         {
-            
-        perform();
+            perform();
         }
     } 
     
     public void perform(){
         if (keyValue >= 0) {
-               gasStation.addNumber(keyValue);
-               gasStation.updateScreen();
+           gasStation.addNumber(keyValue);
+           gasStation.updateScreen();
         } 
     }
 }

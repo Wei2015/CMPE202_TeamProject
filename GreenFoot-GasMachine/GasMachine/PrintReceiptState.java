@@ -23,47 +23,22 @@ public class PrintReceiptState extends State
     }
 
    
-        public void  pressA(){
-          
-        }
-    
-     public void  pressB(){
-        
-        }
-        
-             public void  pressC(){
-                }
-     public void  pressD(){
-        }
-    public void pressE(){
-        
-    }
-    public void pressF(){
-        
-    }
-    public void pressG(){
-        
-    }
-    public void pressH(){
-        
-    }
-     public void setMessage(){
+    public void setMessage(){
         gasStation.getScreen().setText(ScreenMsg);
-     }
-     public void insertCreditCard(){}
-     public void dispense(){}
-     
-     public void print(double cost){
-         carWashCode = new Random().nextInt(999999)+100000;
-         World world = gasStation.getCardSlot().getWorld();
-         String msg = "Receipt\nYour cost is : $" + String.valueOf(cost) +"\nYour car wash code is: " 
-         + carWashCode;
-         world.addObject(new Receipt(msg),100,380);
-         
-     }
-
-     public void pressNumberKey(){}
-     public void pressEnter(){}
-     public void pressClear(){}
+    }
+    public void insertCreditCard(){}
+    public void dispense(){}
+    
+    public void print(double cost){
+        carWashCode = new Random().nextInt(999999)+100000;
+        World world = gasStation.getCardSlot().getWorld();
+        String msg = "Receipt\nYour cost is : $" + String.valueOf(cost) +"\nYour car wash code is: " 
+        + carWashCode;
+        world.addObject(new Receipt(msg),100,380);
+    }
+    
+    public void pressNumberKey(){}
+    public void pressEnter(){}
+    public void pressClear(){}
    
 }
