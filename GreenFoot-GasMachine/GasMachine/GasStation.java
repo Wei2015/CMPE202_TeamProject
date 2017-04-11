@@ -15,7 +15,7 @@ public class GasStation
     
     State initialState;
     State printReceiptState;
-    State rceiptOptionSate;
+    State receiptOptionSate;
     State cardScannedState;
     State cardVerifiedState;
     State fuelDispensingState;
@@ -30,7 +30,7 @@ public class GasStation
     {
         initialState = new InitialState(this);
         printReceiptState = new PrintReceiptState(this);
-        rceiptOptionSate = new ReceiptOptionState(this);
+        receiptOptionSate = new ReceiptOptionState(this);
         cardScannedState = new CardScannedState(this);
         cardVerifiedState = new CardVerifiedState(this);
         fuelDispensingState = new FuelDispensingState(this);
@@ -80,8 +80,8 @@ public class GasStation
     }
     
     public void insertCreditCard() {
-        setState(cardScannedState);
-        updateScreen();
+       // setState(cardScannedState);
+       // updateScreen();
         
     }
     
@@ -96,7 +96,7 @@ public class GasStation
         currentState.setMessage();
     }
     
-    private void setState(State state)
+    public void setState(State state)
     {
         currentState = state;
     }
@@ -128,7 +128,7 @@ public class GasStation
     
     public State getRceiptOptionSate()
     {
-        return rceiptOptionSate;
+        return receiptOptionSate;
     }
     
     public void carWash(boolean haveCarWash) 
@@ -155,7 +155,7 @@ public class GasStation
              setState(printReceiptState);
              printReceipt();
          } else {
-             setState(rceiptOptionSate);
+             setState(receiptOptionSate);
          }
          updateScreen();
     }

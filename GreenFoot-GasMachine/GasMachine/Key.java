@@ -34,10 +34,10 @@ public class Key extends Actor
     } 
     
     public void perform(){
-    if (keyValue >= 0) {
-           gasStation.addNumber(keyValue);
-           gasStation.updateScreen();
-           } 
-}
+        if (keyValue >= 0) {
+               gasStation.addNumber(keyValue);
+               gasStation.updateScreen();
+        } 
+    }
 }
 

@@ -7,7 +7,7 @@ import java.util.Random;
  *
  */
 
-public class PrintReceiptState implements State
+public class PrintReceiptState extends State
 {
     GasStation gasStation;
     final private String ScreenMsg = "Your receipt is being printed!";
@@ -35,7 +35,18 @@ public class PrintReceiptState implements State
                 }
      public void  pressD(){
         }
-    
+    public void pressE(){
+        
+    }
+    public void pressF(){
+        
+    }
+    public void pressG(){
+        
+    }
+    public void pressH(){
+        
+    }
      public void setMessage(){
         gasStation.getScreen().setText(ScreenMsg);
      }
@@ -51,7 +62,7 @@ public class PrintReceiptState implements State
          
      }
 
-               public void pressNumberKey(){}
+     public void pressNumberKey(){}
      public void pressEnter(){}
      public void pressClear(){}
    

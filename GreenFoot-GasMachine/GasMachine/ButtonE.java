@@ -11,4 +11,10 @@ public class ButtonE extends Button
     public ButtonE(GasStation gasStation){
         super(gasStation);
     }   
+    
+    public void perform(){
+        
+        gasStation.getState().pressE();
+      
+    }
 }

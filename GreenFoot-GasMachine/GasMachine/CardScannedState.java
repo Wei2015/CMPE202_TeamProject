@@ -4,7 +4,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class CardScannedState implements State 
+public class CardScannedState extends State 
 {
    GasStation gasStation;
    final private String ScreenMsg = "Please input your Zipcode for card verification!\n";
@@ -40,7 +40,17 @@ public class CardScannedState implements State
                 }
      public void  pressD(){
         }
+        public void pressE(){
+    }
+    public void pressF(){
         
+    }
+    public void pressG(){
+        
+    }
+    public void pressH(){
+        
+    }    
                public void pressNumberKey(){}
      public void pressEnter(){
          gasStation.creditCardVerify();

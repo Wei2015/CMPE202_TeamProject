@@ -50,14 +50,14 @@ public class GasMachineWorld extends World
         buttons[7] = new ButtonH(gasStation);
         
         int x = 160;
-        int y = 100;
+        int y = 102;
         for (int i = 0; i < buttons.length; i++) {
             if (i == 4) {
              x = 500;
-             y = 100;
+             y = 102;
             }
             addObject(buttons[i], x, y);
-            y+= 40;
+            y+= 30;
         }
     }
     
