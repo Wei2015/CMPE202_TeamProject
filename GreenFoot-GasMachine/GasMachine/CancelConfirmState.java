@@ -26,7 +26,6 @@ public class CancelConfirmState extends State
         + YES_OPTION + printHelper.newLine(2) + NO_OPTION );
     }
     
-    
     public void  pressC(){
         gasStation.reStart();
     }

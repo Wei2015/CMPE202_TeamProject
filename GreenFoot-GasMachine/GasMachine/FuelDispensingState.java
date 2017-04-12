@@ -33,48 +33,24 @@ public class FuelDispensingState extends State
             + ScreenMsg4 + unitCost + ScreenMsg5);
         }
     }
-    public void insertCreditCard(){}
-    public void dispense(){}
-    public void print(double cost){}
-    
-    public void  pressA(){
-      
-    }
-    
-    public void  pressB(){
-    
-    }
-    
-    public void  pressC(){
-    }
-    public void  pressD(){
-    }
+
     public void pressE(){
         gasStation.setState(gasStation.getHelpState());
         gasStation.getState().setPrevState(gasStation.getFuelDispensingState());
         gasStation.updateScreen();
     }
-    public void pressF(){
-        
-    }
-    public void pressG(){
-        
-    }
+
     public void pressH(){
         gasStation.setState(gasStation.getCancelConfirmState());
         gasStation.getState().setPrevState(gasStation.getFuelDispensingState());
         gasStation.updateScreen();
         
     }    
-    
-    public void pressNumberKey(){}
-    public void pressEnter(){}
-    public void pressClear(){}
+
     public void pressFeulType (String fuelType, double unitCost) {
         gasStation.setFuelUnitCost(unitCost);
         gasStation.setFuelType(fuelType);
         gasStation.getScreen().setText(ScreenMsg1 + ScreenMsg2 + ScreenMsg3 + fuelType 
         + ScreenMsg4 + unitCost + ScreenMsg5);
-        //gasStation.updateScreen();
     }
 }

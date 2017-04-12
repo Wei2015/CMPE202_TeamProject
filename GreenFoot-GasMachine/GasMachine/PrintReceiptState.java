@@ -22,12 +22,9 @@ public class PrintReceiptState extends State
         this.gasStation = gasStation;
     }
 
-   
     public void setMessage(){
         gasStation.getScreen().setText(ScreenMsg);
     }
-    public void insertCreditCard(){}
-    public void dispense(){}
     
     public void print(double cost){
         carWashCode = new Random().nextInt(999999)+100000;
@@ -36,9 +33,5 @@ public class PrintReceiptState extends State
         + carWashCode;
         world.addObject(new Receipt(msg),100,380);
     }
-    
-    public void pressNumberKey(){}
-    public void pressEnter(){}
-    public void pressClear(){}
    
 }

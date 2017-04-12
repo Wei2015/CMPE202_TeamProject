@@ -39,7 +39,6 @@ public class ReceiptOptionState extends State
     }
     
     public void  pressC(){
-    
         gasStation.printReceipt();
         gasStation.reStart();
     }

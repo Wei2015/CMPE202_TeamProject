@@ -25,11 +25,7 @@ public class CardVerifiedState extends State
      {
         gasStation.getScreen().setText(ScreenMsg1 + ScreenMsg2 + ScreenMsg3 + ScreenMsg4);
      }
-     public void insertCreditCard(){}
-     public void dispense(){}
-     
-     public void print(double cost) {}
-     
+
     public void pressA(){
           gasStation.carWash(true);
           gasStation.setState(gasStation.getFuelDispensingState());
@@ -42,21 +38,12 @@ public class CardVerifiedState extends State
           gasStation.updateScreen();
         }
         
-     public void  pressC(){
-                }
-     public void  pressD(){
-        }
     public void pressE(){
         gasStation.setState(gasStation.getHelpState());
         gasStation.getState().setPrevState(gasStation.getCardVerifiedState());
         gasStation.updateScreen();
     }
-    public void pressF(){
-        
-    }
-    public void pressG(){
-        
-    }
+
     public void pressH(){
         gasStation.setState(gasStation.getCancelConfirmState());
         gasStation.getState().setPrevState(gasStation.getCardVerifiedState());

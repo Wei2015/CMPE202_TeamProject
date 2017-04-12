@@ -23,13 +23,9 @@ public class State
     public void pressG(){};
     public void pressH(){};
     
-    
     public void pressNumberKey(){};
     public void pressEnter(){};
     public void pressClear(){};
-    public void setPrevState (State prevState) {
-    }
-    public void pressFeulType (String fuelType, double unitCost) {
-        
-    }
+    public void setPrevState (State prevState) {}
+    public void pressFeulType (String fuelType, double unitCost) {}
 }

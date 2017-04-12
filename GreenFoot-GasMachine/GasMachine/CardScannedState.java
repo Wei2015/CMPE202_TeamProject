@@ -19,7 +19,6 @@ public class CardScannedState extends State
         this.gasStation = gasStation;
     }
     
-    
     public void setMessage()
     {
         String message = ScreenMsg1 + ScreenMsg2 + ScreenMsg3 + gasStation.getNumber() + ScreenMsg4;
@@ -31,8 +30,6 @@ public class CardScannedState extends State
         gasStation.getState().setPrevState(gasStation.getCardScannedState());
         gasStation.updateScreen();
     }    
-    
-    public void pressNumberKey(){}
     
     public void pressEnter(){
         gasStation.creditCardVerify();

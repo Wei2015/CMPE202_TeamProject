@@ -26,41 +26,5 @@ public class InitialState extends State
     {
         gasStation.setState(gasStation.cardScannedState);
         gasStation.updateScreen();
-        
     }
-    
-    public void dispense()
-    {
-    }
-    
-    public void print(double cost) {}
-    
-        public void  pressA(){
-          
-        }
-    
-     public void  pressB(){
-        
-        }
-        
-             public void  pressC(){
-                }
-     public void  pressD(){
-        }
-         public void pressE(){
-        
-    }
-    public void pressF(){
-        
-    }
-    public void pressG(){
-        
-    }
-    public void pressH(){
-        
-    }   
-     
-               public void pressNumberKey(){}
-     public void pressEnter(){}
-     public void pressClear(){}
 }
