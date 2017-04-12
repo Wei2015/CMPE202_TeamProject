@@ -1,6 +1,6 @@
 import java.util.concurrent.TimeUnit;
 /**
- * Write a description of class HelpState here.
+ * Customer has choice to cancel the whole transaction.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -12,6 +12,7 @@ public class CancelConfirmState extends State
     final String CONFIRM_MESSAGE = "Are you sure you want to cancel?";
     final String YES_OPTION = "Yes";
     final String NO_OPTION = "No";
+    
     /**
      * Constructor for objects of class CardScannedState
      */
@@ -26,15 +27,24 @@ public class CancelConfirmState extends State
         + YES_OPTION + printHelper.newLine(2) + NO_OPTION );
     }
     
+    /**
+     * If customer choose to cancel transaction, restart GasStation (go to initialstate).
+     */
     public void  pressC(){
         gasStation.reStart();
     }
     
+    /**
+     * If customer doesn't cancel, keep going with current transaction (go to previous state).
+     */
     public void  pressD(){
         gasStation.setState(this.prevState);
         gasStation.updateScreen();
     }
     
+    /**
+     * Help record previous state (state where the transaction got disruppted).
+     */
     public void setPrevState (State prevState) {
         this.prevState = prevState;
     }

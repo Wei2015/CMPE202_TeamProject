@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=CancelConfirmState
-comment0.text=\n\ Write\ a\ description\ of\ class\ HelpState\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\n\ Customer\ has\ choice\ to\ cancel\ the\ whole\ transaction.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=gasStation
 comment1.target=CancelConfirmState(GasStation)
 comment1.text=\n\ Constructor\ for\ objects\ of\ class\ CardScannedState\n
@@ -8,8 +8,11 @@ comment2.params=
 comment2.target=void\ setMessage()
 comment3.params=
 comment3.target=void\ pressC()
+comment3.text=\n\ If\ customer\ choose\ to\ cancel\ transaction,\ restart\ GasStation\ (go\ to\ initialstate).\n
 comment4.params=
 comment4.target=void\ pressD()
+comment4.text=\n\ If\ customer\ doesn't\ cancel,\ keep\ going\ with\ current\ transaction\ (go\ to\ previous\ state).\n
 comment5.params=prevState
 comment5.target=void\ setPrevState(State)
+comment5.text=\n\ Help\ record\ previous\ state\ (state\ where\ the\ transaction\ got\ disruppted).\n
 numComments=6

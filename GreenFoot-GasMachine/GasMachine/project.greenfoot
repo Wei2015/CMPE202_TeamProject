@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Tue Apr 11 17:13:07 PDT 2017
+#Tue Apr 11 21:23:32 PDT 2017
 target24.type=ClassTarget
 target16.name=KeyClear
 class.FuelType91.image=91.jpg
@@ -673,8 +673,8 @@ target11.x=0
 dependency19.to=Key3
 dependency9.type=UsesDependency
 dependency72.to=GasStation
-editor.fx.0.y=25
-editor.fx.0.x=306
+editor.fx.0.y=23
+editor.fx.0.x=100
 dependency8.to=FuelType87
 target44.typeParameters=
 target26.showInterface=false
