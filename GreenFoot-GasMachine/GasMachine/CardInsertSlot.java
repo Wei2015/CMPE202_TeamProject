@@ -23,7 +23,7 @@ public class CardInsertSlot extends Actor
        Actor creditCard = getOneIntersectingObject(CreditCard.class);
        World world = getWorld();
        if (creditCard != null) {
-           gasStation.insertCreditCard();
+           gasStation.getState().insertCreditCard();
            world.removeObject(creditCard);
         }
         

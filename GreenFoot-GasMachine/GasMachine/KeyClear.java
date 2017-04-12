@@ -13,4 +13,10 @@ public class KeyClear extends Key
         super(-1,gasStation);
     }
       
+    
+        public void perform(){
+                      
+             gasStation.getState().pressClear();
+           
+        }
 }

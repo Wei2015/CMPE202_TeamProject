@@ -4,7 +4,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class InitialState implements State 
+public class InitialState extends State 
 {
    GasStation gasStation;
    final private String ScreenMsg = "Welcome to Gas Station!";
@@ -24,11 +24,7 @@ public class InitialState implements State
     
     public void insertCreditCard()
     {
+        gasStation.setState(gasStation.cardScannedState);
+        gasStation.updateScreen();
     }
-    
-    public void dispense()
-    {
-    }
-    
-    public void print(double cost) {}
 }

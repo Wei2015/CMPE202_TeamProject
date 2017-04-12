@@ -10,6 +10,6 @@ public class FuelType87 extends FuelType
 {
     public FuelType87(GasStation gasStation)
     {
-        super(2.99, gasStation);
+        super("87", 2.99, gasStation);
     }
 }

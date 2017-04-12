@@ -4,21 +4,33 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class HelpState implements State
+public class HelpState extends State
 {
     GasStation gasStation;
-
+    private State prevState;
+    final private String ScreenMsg1 = printHelper.newLine(4) + printHelper.whiteSpace(51) + "Back\n";
+    final private String ScreenMsg2 = printHelper.whiteSpace(15) + "Our staff is coming...";
+    final private String ScreenMsg3 = printHelper.newLine(2) + printHelper.whiteSpace(19) + "Please wait...\n\n";
+    final private String ScreenMsg4 = printHelper.whiteSpace(21) + "[]~(￣▽￣)~* ";
     /**
      * Constructor for objects of class CardScannedState
      */
     public HelpState(GasStation gasStation)
     {
+        this.prevState = gasStation.cardVerifiedState;
         this.gasStation = gasStation;
     }
-
     
-     public void setMessage(){};
-     public void insertCreditCard(){};
-     public void dispense(){}
-     public void print(double cost) {}
+    public void setMessage(){
+        gasStation.getScreen().setText(ScreenMsg1 + ScreenMsg2 + ScreenMsg3 + ScreenMsg4);
+    }
+
+    public void pressF(){
+        gasStation.setState(this.prevState);
+        gasStation.updateScreen();
+    }
+
+    public void setPrevState (State prevState) {
+        this.prevState = prevState;
+    }
 }

@@ -5,25 +5,25 @@ import greenfoot.*;
  *
  */
 
-public class ReceiptOptionState implements State 
+public class ReceiptOptionState extends State 
 {
-   GasStation gasStation;
+    GasStation gasStation;
     
     final String OPTION_MESSAGE = "Would you like to print your receipt?";
     final String YES_OPTION = "Yes";
     final String NO_OPTION = "No";
+    final private String ScreenMsg = printHelper.whiteSpace(49) + "Help";
     
     
     private boolean answer;
     
     /**
-     * Constructor 
-     */
+    * Constructor 
+    */
     public ReceiptOptionState(GasStation gasStation) 
     {
         this.gasStation = gasStation;
     }
-   
     
     public void print(double cost) 
     {
@@ -32,14 +32,26 @@ public class ReceiptOptionState implements State
         world.addObject(new Receipt(msg),100,380);
     }
     
-     public void setMessage()
-     {
-       gasStation.getScreen().setText(OPTION_MESSAGE + "\n\n\n\n\n\n\n" + YES_OPTION 
-       +"\n\n\n" + NO_OPTION ); 
-     }
-     public void insertCreditCard(){}
+    public void setMessage()
+    {
+        gasStation.getScreen().setText(OPTION_MESSAGE + printHelper.newLine(2) + ScreenMsg 
+        + printHelper.newLine(4) + YES_OPTION + printHelper.newLine(2) + NO_OPTION ); 
+    }
     
-    public void dispense(){}
+    public void  pressC(){
+        gasStation.printReceipt();
+        gasStation.reStart();
+    }
+    
+    public void  pressD(){
+        gasStation.reStart();
+    }
+    
+    public void pressE(){
+        gasStation.setState(gasStation.getHelpState());
+        gasStation.getState().setPrevState(gasStation.getReceiptOptionState());
+        gasStation.updateScreen();
+    }
 }
 
 

@@ -9,18 +9,20 @@ public class GasStation
     private boolean hasCarWash;
     private double fuelUnitCost = 0.0;
     private double fuelCost;
+    private String fuelType;
     
     
     State currentState;
+    //State prevState;
     
     State initialState;
     State printReceiptState;
-    State rceiptOptionSate;
+    State receiptOptionSate;
     State cardScannedState;
     State cardVerifiedState;
     State fuelDispensingState;
     State helpState;
-    
+    State cancelConfirmState;
     
 
     /**
@@ -30,19 +32,18 @@ public class GasStation
     {
         initialState = new InitialState(this);
         printReceiptState = new PrintReceiptState(this);
-        rceiptOptionSate = new ReceiptOptionState(this);
+        receiptOptionSate = new ReceiptOptionState(this);
         cardScannedState = new CardScannedState(this);
         cardVerifiedState = new CardVerifiedState(this);
         fuelDispensingState = new FuelDispensingState(this);
         helpState = new HelpState(this);
+        cancelConfirmState = new CancelConfirmState(this);
        
         numberEntered = new ArrayList<>();
         screenMessage = new ScreenMessage();
         cardSlot = new CardInsertSlot(this);
         setState(initialState);
         updateScreen();
-        
-        
     }
     
     public Message getScreen()
@@ -80,8 +81,8 @@ public class GasStation
     }
     
     public void insertCreditCard() {
-        setState(cardScannedState);
-        updateScreen();
+       // setState(cardScannedState);
+       // updateScreen();
         
     }
     
@@ -96,7 +97,7 @@ public class GasStation
         currentState.setMessage();
     }
     
-    private void setState(State state)
+    public void setState(State state)
     {
         currentState = state;
     }
@@ -126,21 +127,46 @@ public class GasStation
         return printReceiptState;
     }
     
-    public State getRceiptOptionSate()
+    public State getReceiptOptionState()
     {
-        return rceiptOptionSate;
+        return receiptOptionSate;
+    }
+
+    public State getHelpState()
+    {
+        return helpState;
+    }
+ 
+    public State getCancelConfirmState()
+    {
+        return cancelConfirmState;
     }
     
     public void carWash(boolean haveCarWash) 
     {
-        hasCarWash = haveCarWash;
-        setState(fuelDispensingState);
+        this.hasCarWash = haveCarWash;
+        
         
     }
    
-    public void setFuelType(double unitCost)
+    public void setFuelUnitCost(double unitCost)
     {
         fuelUnitCost = unitCost;
+    }
+    
+    public double getFuelUnitCost() 
+    {
+        return fuelUnitCost;
+    }
+    
+    public void setFuelType(String fuelType)
+    {
+        this.fuelType = fuelType;
+    }
+    
+    public String getFuelType() 
+    {
+        return fuelType;
     }
     
     public void calculateFuelCost(int units) 
@@ -150,7 +176,7 @@ public class GasStation
              setState(printReceiptState);
              printReceipt();
          } else {
-             setState(rceiptOptionSate);
+             setState(receiptOptionSate);
          }
          updateScreen();
     }
@@ -164,4 +190,5 @@ public class GasStation
         setState(initialState);
         updateScreen();
     }
+
 }
