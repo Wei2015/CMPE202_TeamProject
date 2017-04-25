@@ -19,6 +19,9 @@ public class GasMachineWorld extends World
         super(800, 600, 1);
         gasStation = new GasStation();
         prepare();
+   
+        
+        
     }
     
     /**

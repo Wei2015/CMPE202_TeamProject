@@ -13,8 +13,8 @@ public class ButtonE extends Button
     }   
     
     public void perform(){
-        
-        gasStation.getState().pressE();
+        gasStation.getMenu().cmd("E");
+        //gasStation.getState().pressE();
       
     }
 }

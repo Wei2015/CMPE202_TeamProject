@@ -11,6 +11,16 @@ public class GasStation
     private double fuelCost;
     private String fuelType;
     
+    private IMenuCommand aCommand;
+    private IMenuCommand bCommand;
+    private IMenuCommand cCommand;
+    private IMenuCommand dCommand;
+    private IMenuCommand eCommand;
+    private IMenuCommand fCommand;
+    private IMenuCommand gCommand;
+    private IMenuCommand hCommand;
+    Menu menu = new Menu();
+    
     
     State currentState;
     //State prevState;
@@ -24,7 +34,9 @@ public class GasStation
     State helpState;
     State cancelConfirmState;
     
-
+   public Menu getMenu(){
+    return menu;
+}
     /**
      * Constructor for objects of class Controller
      */
@@ -43,7 +55,114 @@ public class GasStation
         screenMessage = new ScreenMessage();
         cardSlot = new CardInsertSlot(this);
         setState(initialState);
+           
+            
+            aCommand  = new MenuCommand() ;
+            IMenuInvoker menuA = new MenuOption() ;
+            menuA.setCommand(aCommand);
+            aCommand.setReceiver(
+                new IMenuReceiver() {
+                    public void doAction() {
+                           currentState.pressA();
+                    }
+                }
+            ) ;
+            
+            bCommand  = new MenuCommand() ;
+            IMenuInvoker menuB = new MenuOption() ;
+            menuB.setCommand(bCommand);
+            bCommand.setReceiver(
+                new IMenuReceiver() {
+                    public void doAction() {
+                           currentState.pressB();
+                    }
+                }
+            ) ;
+            
+            cCommand  = new MenuCommand() ;
+            IMenuInvoker menuC = new MenuOption() ;
+            menuC.setCommand(cCommand);
+            cCommand.setReceiver(
+                new IMenuReceiver() {
+                    public void doAction() {
+                           currentState.pressC();
+                    }
+                }
+            ) ;
+            
+            dCommand  = new MenuCommand() ;
+            IMenuInvoker menuD = new MenuOption() ;
+            menuD.setCommand(dCommand);
+            dCommand.setReceiver(
+                new IMenuReceiver() {
+                    public void doAction() {
+                           currentState.pressD();
+                    }
+                }
+            ) ;
+            
+            eCommand  = new MenuCommand() ;
+            IMenuInvoker menuE = new MenuOption() ;
+            menuE.setCommand(eCommand);
+            eCommand.setReceiver(
+                new IMenuReceiver() {
+                    public void doAction() {
+                           currentState.pressE();
+                    }
+                }
+            ) ; 
+                      
+            fCommand  = new MenuCommand() ;
+            IMenuInvoker menuF = new MenuOption() ;
+            menuF.setCommand(fCommand);
+            fCommand.setReceiver(
+                new IMenuReceiver() {
+                    public void doAction() {
+                           currentState.pressF();
+                    }
+                }
+            ) ; 
+            
+            gCommand  = new MenuCommand() ;
+            IMenuInvoker menuG = new MenuOption() ;
+            menuG.setCommand(gCommand);
+            gCommand.setReceiver(
+                new IMenuReceiver() {
+                    public void doAction() {
+                           currentState.pressG();
+                    }
+                }
+            ) ; 
+            
+            
+            hCommand  = new MenuCommand() ;
+            IMenuInvoker menuH = new MenuOption() ;
+            menuH.setCommand(hCommand);
+            hCommand.setReceiver(
+                new IMenuReceiver() {
+                    public void doAction() {
+                           currentState.pressH();
+                    }
+                }
+            ) ; 
+            
+            menu.setMenuItem("A",aCommand);
+            menu.setMenuItem("B",bCommand);
+            menu.setMenuItem("C",cCommand);
+            menu.setMenuItem("D",dCommand);
+            menu.setMenuItem("E",eCommand);
+            menu.setMenuItem("F",fCommand);
+            menu.setMenuItem("G",gCommand);
+            menu.setMenuItem("H",hCommand);
+            
+            
+            
+        
         updateScreen();
+        
+        
+        
+        
     }
     
     public Message getScreen()

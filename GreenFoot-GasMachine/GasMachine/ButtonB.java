@@ -15,6 +15,7 @@ public class ButtonB extends Button
     
        
     public void perform(){
-            gasStation.getState().pressB();
+        gasStation.getMenu().cmd("B");
+        //gasStation.getState().pressB();
     }
 }
