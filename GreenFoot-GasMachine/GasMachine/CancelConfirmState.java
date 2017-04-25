@@ -23,8 +23,8 @@ public class CancelConfirmState extends State
     }
     
     public void setMessage(){
-        gasStation.getScreen().setText(CONFIRM_MESSAGE + printHelper.newLine(6) 
-        + YES_OPTION + printHelper.newLine(2) + NO_OPTION );
+        gasStation.getScreen().setText(CONFIRM_MESSAGE + PrintHelper.newLine(6) 
+        + YES_OPTION + PrintHelper.newLine(2) + NO_OPTION );
     }
     
     /**

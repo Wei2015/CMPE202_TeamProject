@@ -8,10 +8,10 @@ public class HelpState extends State
 {
     GasStation gasStation;
     private State prevState;
-    final private String ScreenMsg1 = printHelper.newLine(4) + printHelper.whiteSpace(51) + "Back\n";
-    final private String ScreenMsg2 = printHelper.whiteSpace(15) + "Our staff is coming...";
-    final private String ScreenMsg3 = printHelper.newLine(2) + printHelper.whiteSpace(19) + "Please wait...\n\n";
-    final private String ScreenMsg4 = printHelper.whiteSpace(21) + "[]~(￣▽￣)~* ";
+    final private String ScreenMsg1 = PrintHelper.newLine(4) + PrintHelper.whiteSpace(51) + "Back\n";
+    final private String ScreenMsg2 = PrintHelper.whiteSpace(15) + "Our staff is coming...";
+    final private String ScreenMsg3 = PrintHelper.newLine(2) + PrintHelper.whiteSpace(19) + "Please wait...\n\n";
+    final private String ScreenMsg4 = PrintHelper.whiteSpace(21) + "[]~(￣▽￣)~* ";
     /**
      * Constructor for objects of class CardScannedState
      */

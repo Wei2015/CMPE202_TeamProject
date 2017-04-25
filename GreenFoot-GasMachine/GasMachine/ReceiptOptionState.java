@@ -12,7 +12,7 @@ public class ReceiptOptionState extends State
     final String OPTION_MESSAGE = "Would you like to print your receipt?";
     final String YES_OPTION = "Yes";
     final String NO_OPTION = "No";
-    final private String ScreenMsg = printHelper.whiteSpace(49) + "Help";
+    final private String ScreenMsg = PrintHelper.whiteSpace(49) + "Help";
     
     
     private boolean answer;
@@ -34,8 +34,8 @@ public class ReceiptOptionState extends State
     
     public void setMessage()
     {
-        gasStation.getScreen().setText(OPTION_MESSAGE + printHelper.newLine(2) + ScreenMsg 
-        + printHelper.newLine(4) + YES_OPTION + printHelper.newLine(2) + NO_OPTION ); 
+        gasStation.getScreen().setText(OPTION_MESSAGE + PrintHelper.newLine(2) + ScreenMsg 
+        + PrintHelper.newLine(4) + YES_OPTION + PrintHelper.newLine(2) + NO_OPTION ); 
     }
     
     public void  pressC(){

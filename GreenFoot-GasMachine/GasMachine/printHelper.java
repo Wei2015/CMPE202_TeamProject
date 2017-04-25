@@ -4,12 +4,12 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public final class printHelper  
+public final class PrintHelper  
 {
     /**
      * Constructor for objects of class printHelper
      */
-    public printHelper()
+    public PrintHelper()
     {
     }
 

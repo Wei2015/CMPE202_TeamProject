@@ -1,8 +1,8 @@
 #BlueJ class context
-comment0.target=printHelper
+comment0.target=PrintHelper
 comment0.text=\n\ Write\ a\ description\ of\ class\ printHelper\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
-comment1.target=printHelper()
+comment1.target=PrintHelper()
 comment1.text=\n\ Constructor\ for\ objects\ of\ class\ printHelper\n
 comment2.params=n
 comment2.target=java.lang.String\ whiteSpace(int)

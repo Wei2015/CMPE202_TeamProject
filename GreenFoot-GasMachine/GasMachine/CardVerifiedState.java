@@ -9,9 +9,9 @@ public class CardVerifiedState extends State
     // instance variables - replace the example below with your own
     GasStation gasStation;
     final private String ScreenMsg1 = "Do you want car wash?\n\n";
-    final private String ScreenMsg2 = " Yes" + printHelper.whiteSpace(45) + "Help";
+    final private String ScreenMsg2 = " Yes" + PrintHelper.whiteSpace(45) + "Help";
     final private String ScreenMsg3 = "\n\n No";
-    final private String ScreenMsg4 = printHelper.newLine(4) + printHelper.whiteSpace(49) + "Cancel";
+    final private String ScreenMsg4 = PrintHelper.newLine(4) + PrintHelper.whiteSpace(49) + "Cancel";
     /**
      * Constructor for objects of class CardScannedState
      */

@@ -8,9 +8,9 @@ public class CardScannedState extends State
 {
     GasStation gasStation;
     final private String ScreenMsg1 = "Please input your Zipcode for card\n";
-    final private String ScreenMsg2 = "verification!" + printHelper.newLine(4);
-    final private String ScreenMsg3 = printHelper.whiteSpace(16) + "Your input: ";
-    final private String ScreenMsg4 = printHelper.newLine(3) + printHelper.whiteSpace(49) + "Cancel";
+    final private String ScreenMsg2 = "verification!" + PrintHelper.newLine(4);
+    final private String ScreenMsg3 = PrintHelper.whiteSpace(16) + "Your input: ";
+    final private String ScreenMsg4 = PrintHelper.newLine(3) + PrintHelper.whiteSpace(49) + "Cancel";
     /**
     * Constructor for objects of class CardScannedState
     */
