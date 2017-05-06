@@ -28,7 +28,8 @@ public class PrintReceiptState extends State
     
     public void print(double cost){
         carWashCode = new Random().nextInt(999999)+100000;
-        World world = gasStation.getCardSlot().getWorld();
+       // World world = gasStation.getCardSlot().getWorld();
+       World world = gasStation.getScreen().getWorld();
         String msg = "Receipt\nYour cost is : $" + String.valueOf(cost) +"\nYour car wash code is: " 
         + carWashCode;
         world.addObject(new Receipt(msg),100,380);

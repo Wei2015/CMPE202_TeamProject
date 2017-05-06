@@ -27,7 +27,8 @@ public class ReceiptOptionState extends State
     
     public void print(double cost) 
     {
-        World world = gasStation.getCardSlot().getWorld();
+       // World world = gasStation.getCardSlot().getWorld();
+        World world = gasStation.getScreen().getWorld();
         String msg = "Receipt\nYour cost is : $" + String.valueOf(cost);
         world.addObject(new Receipt(msg),100,380);
     }
